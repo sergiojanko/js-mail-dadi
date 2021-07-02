@@ -56,14 +56,28 @@ console.log(username)
 var userDice = Math.floor(Math.random() * 6) + 1;
 var cpuDice = Math.floor(Math.random() * 6) + 1;
 
+var userDicePlaceholder = document.getElementById("user-dice-placeholder");
+var cpuDicePlaceholder = document.getElementById("cpu-dice-placeholder");
+
+userDicePlaceholder.innerHTML = userDice;
+cpuDicePlaceholder.innerHTML = cpuDice;
+
 console.log("userDice: ", userDice);
 console.log("cpuDice: ", cpuDice);
 
+// * result
+
+var result = document.getElementById("result")
 
 if (userDice > cpuDice) {
+    result.innerHTML = "Hai vinto"
     console.log("Hai vinto");
 } else if (userDice < cpuDice) {
-    console.log("Hai perso")
+    result.innerHTML = "Hai perso";
+    console.log("Hai perso");
 } else {
+    result.innerHTML = "Pareggio";
     console.log("Pareggio")
 }
+
+
