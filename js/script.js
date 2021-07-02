@@ -53,3 +53,17 @@ console.log(username)
 * Lancio Dadi
 */
 
+var userDice = Math.floor(Math.random() * 6) + 1;
+var cpuDice = Math.floor(Math.random() * 6) + 1;
+
+console.log("userDice: ", userDice);
+console.log("cpuDice: ", cpuDice);
+
+
+if (userDice > cpuDice) {
+    console.log("Hai vinto");
+} else if (userDice < cpuDice) {
+    console.log("Hai perso")
+} else {
+    console.log("Pareggio")
+}
